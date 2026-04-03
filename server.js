@@ -37,3 +37,8 @@ app.get("/climate/:item", limiter, async (req, res) => {
 
     const data = await axios.get(`https://weather.visualcrossing.com/VisualCrossingWebServices/rest/services/timeline/${user_input}?key=${API_KEY}`)
 
+    await client.setEx(user_input, 1800, JSON.stringify(data.data))
+
+    res.json(data.data)
+
+
