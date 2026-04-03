@@ -58,5 +58,11 @@ Behavior:
 
 ---
 
+## License
 
-4. Make a request: curl http://localhost:3000/climate/London
+This project is open source and available under the MIT License.
+
+## Project Reference
+
+roadmap.sh Weather API project URL: https://roadmap.sh/projects/weather-api-wrapper-service
+
