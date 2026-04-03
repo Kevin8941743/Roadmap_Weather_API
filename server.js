@@ -21,4 +21,9 @@ const limiter = rateLimit({
     message: "You cannot send any requests for 10 minutes!"
 })
 
+app.get("/climate/:item", limiter, async (req, res) => {
+
+    const user_input = req.params.item
+    console.log(`User requesting: ${user_input}`)
+
 
