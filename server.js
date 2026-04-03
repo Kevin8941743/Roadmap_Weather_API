@@ -35,3 +35,5 @@ app.get("/climate/:item", limiter, async (req, res) => {
 
     console.log(`${user_input} was not found in cache, searching in database...`)
 
+    const data = await axios.get(`https://weather.visualcrossing.com/VisualCrossingWebServices/rest/services/timeline/${user_input}?key=${API_KEY}`)
+
