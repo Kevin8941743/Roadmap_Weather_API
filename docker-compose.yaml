@@ -4,8 +4,8 @@ services:
     ports:
       - "3000:3000"
     environment:
-      API_KEY: "E3CLKGM6FX9V476GKP2QZAAE4"
-      REDIS_URL: "redis://redis:6379"
+      API_KEY: ${API_KEY}
+      REDIS_URL: ${REDIS_URL}
     depends_on:
       - redis
 
