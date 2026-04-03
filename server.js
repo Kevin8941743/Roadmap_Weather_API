@@ -41,4 +41,10 @@ app.get("/climate/:item", limiter, async (req, res) => {
 
     res.json(data.data)
 
+})
+
+app.listen(PORT, () => {
+    console.log(`The server is now listening to port: ${PORT}`)
+})
+
 
