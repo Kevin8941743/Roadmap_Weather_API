@@ -26,4 +26,12 @@ app.get("/climate/:item", limiter, async (req, res) => {
     const user_input = req.params.item
     console.log(`User requesting: ${user_input}`)
 
+    const cache = await client.get(user_input)
+
+    if (cache) {
+        console.log(`Cache found for ${user_input}`)
+        return res.json(JSON.parse(cache))
+    }
+
+    console.log(`${user_input} was not found in cache, searching in database...`)
 
